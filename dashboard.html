@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Siswa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex flex-col">
+
+    <nav class="bg-indigo-600 text-white p-4 flex justify-between items-center shadow-md">
+        <h1 class="text-xl font-semibold">Dashboard Siswa</h1>
+        <ul class="flex space-x-6">
+            <li><a href="materi.html" class="hover:text-gray-300">Materi</a></li>
+            <li><a href="Mini_game/game.html" class="hover:text-gray-300">Game</a></li>
+            <li><a href="Soal/soal.html" class="hover:text-gray-300">Soal</a></li> <!-- Tambahan menu lain -->
+        </ul>
+        <button onclick="logout()" class="bg-red-500 px-4 py-2 rounded hover:bg-red-600 transition">Logout</button>
+    </nav>
+
+    <!-- Konten Dashboard -->
+    <div class="flex-1 flex flex-col items-center justify-center text-center p-6">
+        <img src="foto/avatar-3814049_640.webp" alt="Avatar Siswa" class="h-20 w-20 rounded-full shadow-lg mb-4">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white">Selamat Datang, <span id="username"></span>!</h2>
+        <p class="text-gray-600 dark:text-gray-300 mt-2">Anda telah berhasil login.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 dark:bg-gray-800 text-center p-4 text-gray-700 dark:text-gray-300">
+        &copy; 2025 Sistem Akademik Siswa
+    </footer>
+
+    <script>
+        // Ambil username dari localStorage
+        document.getElementById("username").innerText = localStorage.getItem("username") || "Siswa";
+
+        // Fungsi logout
+        function logout() {
+            localStorage.removeItem("username");
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>

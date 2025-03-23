@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Game Tendangan Penalti</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Mini Game Tendangan Penalti</h1>
+    <p>Skor: <span id="score">0</span></p>
+
+    <div class="stadium">
+      <img
+        src="https://media.giphy.com/media/6BazSQR3Husiqajm98/giphy.gif?cid=ecf05e479s20gvy6rc4n2gki6fpmwv3rigm9kjh4xpxsxbll&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+        class="fans left"
+        alt="Fans Left"
+      />
+      <img
+        src="https://media.giphy.com/media/6BazSQR3Husiqajm98/giphy.gif?cid=ecf05e479s20gvy6rc4n2gki6fpmwv3rigm9kjh4xpxsxbll&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+        class="fans right"
+        alt="Fans Right"
+      />
+
+      <div class="game-container">
+        <div class="goal"></div>
+        <div class="goalkeeper" id="goalkeeper"></div>
+        <div class="ball" id="ball"></div>
+      </div>
+    </div>
+
+    <div class="direction-buttons">
+      <button onclick="setDirection(-50, this)">Kiri</button>
+      <button onclick="setDirection(0, this)">Tengah</button>
+      <button onclick="setDirection(50, this)">Kanan</button>
+    </div>
+
+    <button class="shoot-button" onclick="shootBall()">Tendang!</button>
+    <p id="result"></p>
+
+    <!-- Button Kembali ke Dashboard -->
+    <div class="mt-4">
+      <a href="../dashboard.html" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Kembali ke Dashboard</a>
+    </div>
+
+    <audio id="kickSound" src="kick.mp3"></audio>
+    <audio id="cheerSound" src="cheer.mp3"></audio>
+    <audio id="missSound" src="miss.mp3"></audio>
+
+    <script src="javascript.js"></script>
+  </body>
+</html>
+

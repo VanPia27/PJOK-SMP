@@ -1,0 +1,131 @@
+body {
+  text-align: center;
+  background-color: #66bb6a;
+  font-family: Arial, sans-serif;
+}
+.shoot-button,
+.direction-buttons button {
+  cursor: pointer;
+}
+
+.game-container {
+  position: relative;
+  width: 300px;
+  height: 220px;
+  margin: 30px auto;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_pitch.svg")
+    no-repeat center;
+  background-size: cover;
+  border: 2px solid black;
+}
+
+.goal {
+  position: relative;
+  top: 20px;
+  left: 40px;
+  width: 220px;
+  height: 40px;
+  border: 3px solid white;
+  border-top: none;
+}
+
+.goalkeeper {
+  position: absolute;
+  top: 10px;
+  left: 135px;
+  width: 50px; /* Sesuaikan ukuran gambar */
+  height: 50px;
+  background: url("foto_keeper_kiri.png") no-repeat center;
+  background-size: contain;
+  transition: left 0.3s ease-in-out;
+}
+
+.ball {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  transition: bottom 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+.ball {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: bottom 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+
+.shoot-button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: yellow;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.shoot-button:hover {
+  background-color: orange;
+}
+
+.shoot-button:active {
+  background-color: red;
+  color: white;
+}
+
+.direction-buttons {
+  margin-top: 10px;
+}
+
+.direction-buttons button {
+  padding: 8px 12px;
+  margin: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  background-color: lightgray;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.direction-buttons button:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.direction-buttons button:active {
+  background-color: navy;
+  transform: scale(0.9);
+}
+
+.selected {
+  background-color: green !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+.stadium {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.fans.left,
+.fans.right {
+  position: fixed;
+  top: 0;
+  width: 20vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.fans.left {
+  left: 0;
+}
+
+.fans.right {
+  right: 0;
+}

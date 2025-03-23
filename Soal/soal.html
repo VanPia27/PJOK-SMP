@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis/Soal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-indigo-600 text-white p-4 flex justify-between items-center shadow-md">
+        <h1 class="text-xl font-semibold">Kuis/Soal</h1>
+        <ul class="flex space-x-6">
+            <li><a href="/materi.html" class="hover:text-gray-300">Materi</a></li>
+            <li><a href="/Mini_game/game.html" class="hover:text-gray-300">Game</a></li>
+            <li><a href="/dashboard.html" class="hover:text-gray-300">Dashboard</a></li>
+        </ul>
+        <button onclick="logout()" class="bg-red-500 px-4 py-2 rounded hover:bg-red-600 transition">Logout</button>
+    </nav>
+
+    <!-- Quiz Container -->
+    <div class="max-w-4xl w-full bg-white p-8 rounded-lg shadow-md dark:bg-gray-800 mt-8 mx-4">
+        <h2 class="text-2xl font-semibold text-center text-gray-800 dark:text-white">Kuis Pendidikan Jasmani, Olahraga, dan Kesehatan</h2>
+
+        <form id="quizForm" class="mt-6">
+            <!-- Soal 1 -->
+            <div class="question-container">
+                <div class="question text-xl text-gray-800 dark:text-white">1. Apa yang dimaksud dengan kebugaran jasmani?</div>
+                <ul class="options">
+                    <li><input type="radio" name="q1" value="A"> A. Kemampuan tubuh untuk bertahan lama dalam kegiatan fisik</li>
+                    <li><input type="radio" name="q1" value="B"> B. Kemampuan tubuh untuk menghindari penyakit</li>
+                    <li><input type="radio" name="q1" value="C"> C. Kemampuan tubuh untuk melakukan kegiatan fisik dengan cepat</li>
+                    <li><input type="radio" name="q1" value="D"> D. Kemampuan tubuh untuk beristirahat setelah berolahraga</li>
+                </ul>
+            </div>
+
+            <!-- Soal 2 -->
+            <div class="question-container">
+                <div class="question text-xl text-gray-800 dark:text-white">2. Manakah dari berikut ini yang bukan merupakan manfaat olahraga secara umum?</div>
+                <ul class="options">
+                    <li><input type="radio" name="q2" value="A"> A. Meningkatkan daya tahan tubuh</li>
+                    <li><input type="radio" name="q2" value="B"> B. Meningkatkan kualitas tidur</li>
+                    <li><input type="radio" name="q2" value="C"> C. Mengurangi stres</li>
+                    <li><input type="radio" name="q2" value="D"> D. Menurunkan berat badan secara instan</li>
+                </ul>
+            </div>
+
+            <!-- Soal 3 -->
+            <div class="question-container">
+                <div class="question text-xl text-gray-800 dark:text-white">3. Sebutkan salah satu jenis olahraga yang termasuk dalam olahraga aerobik!</div>
+                <ul class="options">
+                    <li><input type="radio" name="q3" value="A"> A. Renang</li>
+                    <li><input type="radio" name="q3" value="B"> B. Angkat besi</li>
+                    <li><input type="radio" name="q3" value="C"> C. Lompat tinggi</li>
+                    <li><input type="radio" name="q3" value="D"> D. Tenis meja</li>
+                </ul>
+            </div>
+
+            <!-- Soal 4 -->
+            <div class="question-container">
+                <div class="question text-xl text-gray-800 dark:text-white">4. Apa yang dimaksud dengan aktivitas fisik yang teratur?</div>
+                <ul class="options">
+                    <li><input type="radio" name="q4" value="A"> A. Aktivitas yang hanya dilakukan saat luang</li>
+                    <li><input type="radio" name="q4" value="B"> B. Aktivitas yang dilakukan sesekali</li>
+                    <li><input type="radio" name="q4" value="C"> C. Aktivitas yang dilakukan secara konsisten setiap hari</li>
+                    <li><input type="radio" name="q4" value="D"> D. Aktivitas yang hanya dilakukan di akhir pekan</li>
+                </ul>
+            </div>
+
+            <!-- Soal 5 -->
+            <div class="question-container">
+                <div class="question text-xl text-gray-800 dark:text-white">5. Jenis olahraga apa yang dapat meningkatkan kelincahan tubuh?</div>
+                <ul class="options">
+                    <li><input type="radio" name="q5" value="A"> A. Basket</li>
+                    <li><input type="radio" name="q5" value="B"> B. Sepak bola</li>
+                    <li><input type="radio" name="q5" value="C"> C. Voli</li>
+                    <li><input type="radio" name="q5" value="D"> D. Semua jawaban benar</li>
+                </ul>
+            </div>
+
+            <!-- Soal 6 -->
+            <div class="question-container">
+                <div class="question text-xl text-gray-800 dark:text-white">6. Apakah yang dimaksud dengan latihan kekuatan otot?</div>
+                <ul class="options">
+                    <li><input type="radio" name="q6" value="A"> A. Latihan yang melibatkan gerakan otot besar</li>
+                    <li><input type="radio" name="q6" value="B"> B. Latihan yang melibatkan gerakan otot kecil</li>
+                    <li><input type="radio" name="q6" value="C"> C. Latihan dengan beban tubuh saja</li>
+                    <li><input type="radio" name="q6" value="D"> D. Latihan yang tidak melibatkan otot</li>
+                </ul>
+            </div>
+
+            <!-- Soal 7 -->
+            <div class="question-container">
+                <div class="question text-xl text-gray-800 dark:text-white">7. Apa saja manfaat dari olahraga bagi mental?</div>
+                <ul class="options">
+                    <li><input type="radio" name="q7" value="A"> A. Meningkatkan kecemasan</li>
+                    <li><input type="radio" name="q7" value="B"> B. Mengurangi stres</li>
+                    <li><input type="radio" name="q7" value="C"> C. Menurunkan kebahagiaan</li>
+                    <li><input type="radio" name="q7" value="D"> D. Meningkatkan rasa cemas</li>
+                </ul>
+            </div>
+
+            <!-- Soal 8 -->
+            <div class="question-container">
+                <div class="question text-xl text-gray-800 dark:text-white">8. Olahraga yang dapat meningkatkan keseimbangan tubuh adalah?</div>
+                <ul class="options">
+                    <li><input type="radio" name="q8" value="A"> A. Jogging</li>
+                    <li><input type="radio" name="q8" value="B"> B. Yoga</li>
+                    <li><input type="radio" name="q8" value="C"> C. Angkat besi</li>
+                    <li><input type="radio" name="q8" value="D"> D. Berenang</li>
+                </ul>
+            </div>
+
+            <!-- Soal 9 -->
+            <div class="question-container">
+                <div class="question text-xl text-gray-800 dark:text-white">9. Manakah yang merupakan contoh olahraga terstruktur?</div>
+                <ul class="options">
+                    <li><input type="radio" name="q9" value="A"> A. Lari pagi</li>
+                    <li><input type="radio" name="q9" value="B"> B. Sepak bola</li>
+                    <li><input type="radio" name="q9" value="C"> C. Lari santai</li>
+                    <li><input type="radio" name="q9" value="D"> D. Berjalan kaki</li>
+                </ul>
+            </div>
+
+            <!-- Soal 10 -->
+            <div class="question-container">
+                <div class="question text-xl text-gray-800 dark:text-white">10. Olahraga apa yang dapat melatih kelenturan tubuh?</div>
+                <ul class="options">
+                    <li><input type="radio" name="q10" value="A"> A. Tenis</li>
+                    <li><input type="radio" name="q10" value="B"> B. Yoga</li>
+                    <li><input type="radio" name="q10" value="C"> C. Renang</li>
+                    <li><input type="radio" name="q10" value="D"> D. Basket</li>
+                </ul>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mt-6 flex justify-center">
+                <button type="button" onclick="submitQuiz()" class="bg-indigo-600 text-white py-2 px-6 rounded-lg hover:bg-indigo-700 transition">Kirim Jawaban</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="kuis.js"></script>
+</body>
+</html>

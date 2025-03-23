@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Siswa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen">
+
+    <!-- Navbar -->
+    <nav class="bg-indigo-600 text-white p-4 flex justify-between items-center shadow-md">
+        <h1 class="text-xl font-semibold">Materi Pembelajaran</h1>
+        <ul class="flex space-x-6">
+            <li><a href="dashboard.html" class="hover:text-gray-300">Dashboard</a></li>
+            <li><a href="Mini_game/game.html" class="hover:text-gray-300">Game</a></li>
+            <li><a href="Soal/soal.html" class="hover:text-gray-300">Soal</a></li>
+        </ul>
+        <button onclick="logout()" class="bg-red-500 px-4 py-2 rounded hover:bg-red-600 transition">Logout</button>
+    </nav>
+
+    <!-- Konten Materi -->
+    <div class="p-6 max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Daftar Materi Pembelajaran</h2>
+        
+        <div class="space-y-4">
+            <!-- Materi 1 -->
+            <div class="bg-white p-4 rounded-lg shadow-md dark:bg-gray-800">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Buku SMP VII : Pendidikan Jasmani Olahraga dan Kesehatan</h3>
+                <p class="text-gray-600 dark:text-gray-300 mt-2">  
+                    Buku PJOK Kelas 7 membahas dasar-dasar Pendidikan Jasmani, Olahraga, dan Kesehatan yang meliputi 
+                    pentingnya kebugaran jasmani, aktivitas fisik, dan prinsip-prinsip olahraga untuk menjaga kesehatan tubuh.</p>
+                <a href="Materi/PJOK SMP Kelas 7 BS press.pdf" class="inline-block mt-2 text-indigo-600 hover:text-indigo-800" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Unduh Materi PDF
+                </a>
+            </div>
+
+            <!-- Materi 2 -->
+            <div class="bg-white p-4 rounded-lg shadow-md dark:bg-gray-800">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Buku SMP VIII : Pendidikan Jasmani Olahraga dan Kesehatan</h3>
+                <p class="text-gray-600 dark:text-gray-300 mt-2">
+                    Buku PJOK Kelas 8 fokus pada pengembangan keterampilan motorik, seperti koordinasi, keseimbangan, 
+                    dan kelincahan, serta pentingnya pola hidup sehat dan pemeliharaan kebugaran jasmani melalui olahraga.</p>
+                <a href="Materi/Kelas 8 PJOK BS press.pdf" class="inline-block mt-2 text-indigo-600 hover:text-indigo-800" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Unduh Materi PDF
+                </a>
+            </div>
+
+            <!-- Materi 3 -->
+            <div class="bg-white p-4 rounded-lg shadow-md dark:bg-gray-800">
+                <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Buku SMP IX : Pendidikan Jasmani Olahraga dan Kesehatan</h3>
+                <p class="text-gray-600 dark:text-gray-300 mt-2">
+                    Buku PJOK Kelas 9 mengajarkan pentingnya aktivitas fisik dalam kehidupan sehari-hari, termasuk olahraga terstruktur, 
+                    kesehatan reproduksi, dan olahraga yang dapat dilakukan untuk menjaga kebugaran jasmani secara menyeluruh.</p>
+                <a href="Materi/Kelas 9 PJOK BS press.pdf" class="inline-block mt-2 text-indigo-600 hover:text-indigo-800" target="_blank">
+                    <i class="fas fa-file-pdf"></i> Unduh Materi PDF
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 dark:bg-gray-800 text-center p-4 text-gray-700 dark:text-gray-300">
+        &copy; 2025 Sistem Akademik Siswa
+    </footer>
+
+    <script>
+     function logout() {
+    console.log("Logout dipanggil");  // Memastikan fungsi logout dijalankan
+    if (localStorage.getItem("username")) {
+        localStorage.removeItem("username");
+        alert("Anda telah berhasil logout.");
+        window.location.href = "login.html";
+    } else {
+        alert("Anda belum login.");
+    }
+}
+
+    </script>
+
+</body>
+</html>

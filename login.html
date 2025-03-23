@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Siswa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 flex items-center justify-center min-h-screen">
+
+    <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg w-96">
+        <!-- Logo -->
+        <div class="text-center mb-6">
+            <img src="foto/logo unmul.png" alt="Logo" class="h-16 mx-auto">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mt-2">Login Siswa</h2>
+        </div>
+
+        <!-- Form Login -->
+        <form id="loginForm">
+            <div class="mb-4">
+                <label for="username" class="block text-gray-700 dark:text-gray-300 font-medium">Username</label>
+                <input type="text" id="username" class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring focus:ring-indigo-300 dark:bg-gray-700 dark:text-white" placeholder="Masukkan Username">
+            </div>
+
+            <!-- Error Message -->
+            <p id="errorMessage" class="text-red-500 text-sm hidden">Username tidak boleh kosong!</p>
+
+            <!-- Tombol Login -->
+            <button type="button" onclick="login()" class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition mt-4">
+                Login
+            </button>
+        </form>
+
+    </div>
+
+    <!-- Script -->
+    <script src="login.js"></script>
+
+</body>
+</html>
